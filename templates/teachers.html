@@ -1,0 +1,7 @@
+<h2>Lista nauczycieli</h2>
+<ul>
+  {% for t in teachers %}
+    <li>{{ t.name }} - {{ t.subject }} ({{ t.time }}) <a href="{{ url_for('delete_teacher', id=t.id) }}">Usuń</a></li>
+  {% endfor %}
+</ul>
+<a href="{{ url_for('add_teacher') }}">Dodaj nauczyciela</a>
